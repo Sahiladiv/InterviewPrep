@@ -49,7 +49,7 @@ export const QuestionPanel: React.FC<{ question: Question | null; loading: boole
       </div>
 
       {/* Tags */}
-      {question.tags?.length > 0 && (
+      {Array.isArray(question.tags) && question.tags.length > 0 && (
         <div className="mb-3">
           {question.tags.map((tag, i) => (
             <Badge
